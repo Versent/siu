@@ -26,7 +26,7 @@ function asMap(records) {
 	return map;
 }
 
-export default function addOrReplace(array, recordOrRecords) {
+function addOrReplace(array, recordOrRecords) {
 	if (!isImmutable(array)) throw new Error('array must be immutable');
 
 	var updatedRecords    = wrapAsArray(recordOrRecords);
@@ -62,3 +62,6 @@ export default function addOrReplace(array, recordOrRecords) {
 
 	return array;
 }
+
+module.exports = addOrReplace;
+
