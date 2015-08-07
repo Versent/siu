@@ -1,6 +1,6 @@
 {
   "name": "siu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Seamless Immutable Utilities",
   "main": "index.js",
   "scripts": {
