@@ -4,7 +4,7 @@
   "description": "Seamless Immutable Utilities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/tape/bin/tape tests/**/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/sporto/siu/issues"
   },
-  "homepage": "https://github.com/sporto/siu"
+  "homepage": "https://github.com/sporto/siu",
+  "devDependencies": {
+    "lodash": "^3.10.1",
+    "node-uuid": "^1.4.3",
+    "seamless-immutable": "^3.0.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.2.0"
+  }
 }

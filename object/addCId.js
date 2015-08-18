@@ -1,21 +1,18 @@
 var isImmutable    = require('../utils/isImmutable')
 var uuid           = require('node-uuid');
 
-module.exports = function addCId(record) {
-	if (!record)              throw new Error('addCid: Expected record');
-	if (!isImmutable(record)) throw new Error('addCid: record must be immutable');
+module.exports = function addCId(record, prop) {
+	if (!record)              throw new Error('addCId: Expected record');
+	if (!prop)                throw new Error('addCId: Expected prop');
+	if (!isImmutable(record)) throw new Error('addCId: record must be immutable');
 
-	if (record.id) {
+	if (record[prop]) {
 		return record;
 	} else {
-		var id = uuid.v1();
-		var imm = isImmutable(record);
-		if (imm) {
-			return record.merge({id: id});
-		} else {
-			record.id = id;
-			return record;
-		}
+		var cid = uuid.v1();
+		var merges = {};
+		merges[prop] = cid;
+		return record.merge(merges);
 	}
 
 };
