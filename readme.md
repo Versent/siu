@@ -1,7 +1,8 @@
 # Utilities for Seamless Immutable
 
-## Install
+[ ![Codeship Status for Versent/siu](https://codeship.com/projects/06a046b0-284e-0133-8c7f-4ecd95a2c0b9/status?branch=master)](https://codeship.com/projects/97649)
 
+## Install
 
 ```
 npm install siu --save-dev
