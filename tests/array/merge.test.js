@@ -1,6 +1,6 @@
-var test = require('tape');
-var SI   = require('seamless-immutable');
-var siu  = require('../../index.js');
+var test  = require('tape-catch');
+var SI    = require('seamless-immutable');
+var siu   = require('../../index.js');
 
 test('raise if not immutable', function(t) {
 	var items = [{
@@ -28,6 +28,24 @@ test('updates an existing item', function (t) {
 	}]);
 
 	var newItems = siu.a.merge(items, moreItems, 'id');
+
+	t.ok(newItems.length === 1);
+	t.ok(newItems[0].name === 'Julia');
+	t.end();
+});
+
+test('updates using a given key', function (t) {
+	var items = SI([{
+		_id: 1,
+		name: 'Sara'
+	}]);
+
+	var moreItems = SI([{
+		_id: 1,
+		name: 'Julia'
+	}]);
+
+	var newItems = siu.a.merge(items, moreItems, '_id');
 
 	t.ok(newItems.length === 1);
 	t.ok(newItems[0].name === 'Julia');

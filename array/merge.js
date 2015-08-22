@@ -34,9 +34,9 @@ function merge(array, recordOrRecords, key) {
 	// add the rest
 
 	array = array.map(function(existingRecord) {
-		if (!existingRecord.id) throw new Error('Expected exiting record.id');
+		if (!existingRecord[key]) throw new Error('Expected exiting record.' + key);
 
-		var existingId = existingRecord.id;
+		var existingId = existingRecord[key];
 
 		var record = recordsWithKeyMap[existingId];
 		if (record) {

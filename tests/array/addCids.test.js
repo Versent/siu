@@ -1,6 +1,6 @@
-var test = require('tape');
-var SI   = require('seamless-immutable');
-var siu  = require('../../index.js');
+var test  = require('tape-catch');
+var SI    = require('seamless-immutable');
+var siu   = require('../../index.js');
 
 test('a.addCIds', function (t) {
 	var items = SI([{
