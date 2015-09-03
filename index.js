@@ -1,16 +1,16 @@
 module.exports = {
-	isImmutable: require('./utils/isImmutable'),
-	asImmutable: require('./utils/asImmutable'),
-	o: {
-		addCId:       require('./object/addCId'),
-		merge:        require('./object/merge'),
-	},
-	a: {
-		addCIds:      require('./array/addCIds'),
-		merge:        require('./array/merge'),
-		filter:       require('./array/filter'),
-		find:         require('./array/find'),
-		get:          require('./array/get'),
-		reject:       require('./array/reject'),
-	}
+  isImmutable: require('./lib/utils/isImmutable'),
+  asImmutable: require('./lib/utils/asImmutable'),
+  o: {
+    addCId:       require('./lib/object/addCId'),
+    merge:        require('./lib/object/merge'),
+  },
+  a: {
+    addCIds:      require('./lib/array/addCIds'),
+    merge:        require('./lib/array/merge'),
+    filter:       require('./lib/array/filter'),
+    find:         require('./lib/array/find'),
+    get:          require('./lib/array/get'),
+    reject:       require('./lib/array/reject'),
+  }
 }

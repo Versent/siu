@@ -4,7 +4,7 @@
   "description": "Seamless Immutable Utilities",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/tape/bin/tape tests/**/*.js | tap-spec"
+    "test": "./node_modules/tape/bin/tape ./lib/**/*.test.js | tap-spec"
   },
   "repository": {
     "type": "git",
